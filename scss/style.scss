@@ -3,13 +3,14 @@
 //TYPOGRAPHY AND COLORS ----START
 
 body {
-    background: url(../images/bg-top.svg) top right no-repeat,$background-body;
-    background-position-x: 197px;
-    background-position-y: -25px;
+    background: $background-body;
     color: $color-main;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 li {
@@ -18,10 +19,15 @@ li {
 
 .main {
     padding: 6.4rem 0 7.1rem;
+    background: url(../images/bg-top.svg) no-repeat;
+    background-position-x: 200px;
+    background-position-y: -25px;
+    max-width: 37.5rem;
+    width: 100%;
 }
 
 .toggle-price {
-    padding: 0 6.8rem 8rem;
+    margin: 0 auto 8rem;
 
     &__heading {
         font-size: 3.2rem;
@@ -126,5 +132,64 @@ li {
     &__link-secondary {
         background: white;
         color: $Light-Blue;
+    }
+}
+
+@media screen and (min-width:1100px) {
+
+    a:hover, .toggle-price__toggle:hover {
+        cursor: pointer;
+    }
+
+    a:hover {
+        background: transparent;
+    }
+
+    .main {
+        max-width: 144rem;
+        min-height: 100vh;
+        padding: 7.1rem 0 0;
+        background: url(../images/bg-top.svg) top right no-repeat, url(../images/bg-bottom.svg) left bottom no-repeat;
+    }
+
+    .toggle-price {
+        margin-bottom: 6.4rem;
+    }
+
+    .cards {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+
+        &__card-primary {
+            padding: 3.1rem;
+        }
+
+        &__card:first-child {
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        &__card:last-child {
+            border-radius: 0px 10px 10px 0px;
+        }
+
+        &__card-secondary {
+            padding: 5.5rem 3.1rem;
+        }
+
+        &__list-item {
+            padding: 1.2rem 8.15rem;
+        }
+
+        &__link-primary:hover {
+            color: $Light-Blue;
+            outline: 1px solid $Light-Blue;
+        }
+
+        &__link-secondary:hover {
+            color: $White;
+            outline: 1px solid $White;
+        }
     }
 }
