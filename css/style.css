@@ -160,4 +160,10 @@ img {
 html {
   font-size: 62.5%;
 }
+
+body {
+  background: #f6f6fe;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
 /*# sourceMappingURL=style.css.map */

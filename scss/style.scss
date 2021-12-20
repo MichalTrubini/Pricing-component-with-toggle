@@ -1,3 +1,9 @@
 @import 'normalize','settings','variables';
 
 //TYPOGRAPHY AND COLORS ----START
+
+body {
+    background: $background-body;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
