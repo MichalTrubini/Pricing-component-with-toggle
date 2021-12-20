@@ -273,9 +273,23 @@ li {
   background: #009578;
 }
 
+.toggle__input:checked ~ .cards__price {
+  display: none;
+}
+
 .toggle__input:checked ~ .toggle__fill::after {
   -webkit-transform: translateX(23px);
           transform: translateX(23px);
+}
+
+form:valid ~ .cards .cards__card .cards__price {
+  opacity: 0;
+}
+
+form:valid ~ .cards .cards__card .cards__price-secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cards {
@@ -306,9 +320,44 @@ li {
 .cards__price {
   font-size: 7.2rem;
   line-height: 7.1rem;
-  padding-bottom: 3.2rem;
   color: #494c5f;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cards__price-secondary {
+  font-size: 7.2rem;
+  line-height: 7.1rem;
+  color: #494c5f;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cards__price-wrapper {
   border-bottom: 1px solid rgba(109, 113, 141, 0.25);
+  position: relative;
+  height: 103px;
+  padding-bottom: 3.2rem;
+}
+
+.cards__dollar {
+  font-size: 4rem;
+  line-height: 4.8rem;
 }
 
 .cards__list {
@@ -407,6 +456,10 @@ li {
   .cards__link-secondary:hover {
     color: #fff;
     outline: 1px solid #fff;
+  }
+  .cards__dollar {
+    font-size: 7.2rem;
+    line-height: 7.1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
