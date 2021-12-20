@@ -3,7 +3,128 @@
 //TYPOGRAPHY AND COLORS ----START
 
 body {
-    background: $background-body;
+    background: url(../images/bg-top.svg) top right no-repeat,$background-body;
+    background-position-x: 197px;
+    background-position-y: -25px;
+    color: $color-main;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+.main {
+    padding: 6.4rem 0 7.1rem;
+}
+
+.toggle-price {
+    padding: 0 6.8rem 8rem;
+
+    &__heading {
+        font-size: 3.2rem;
+        line-height: 3.9rem;
+        margin-bottom: 4rem;
+    }
+
+    &__wrapper {
+        opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+        gap: 2.4rem;
+    }
+
+    &__toggle {
+        width: 5.6rem;
+        height: 3.2rem;
+        background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+        border-radius: 16px;
+        position: relative;
+    }
+
+    &__circle {
+        width: 2.4rem;
+        height: 2.4rem;
+        background:#fff;
+        border-radius:100%;
+        position: absolute;
+        top: 4px;
+        left: 5px;
+    }
+}
+
+.cards {
+    padding: 0 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    &__card {
+        box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+        border-radius: 10px;
+        padding: 3.1rem 2.9rem;
+    }
+
+    &__type {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        margin-bottom: 2.4rem;
+    }
+
+    &__price {
+        font-size: 7.2rem;
+        line-height: 7.1rem;
+        padding-bottom: 3.2rem;
+        color: $color-accent;
+        border-bottom: 1px solid hsla(232, 13%, 49%, 0.25);
+    }
+
+    &__list {
+        margin-bottom: 3.2rem;
+    }
+
+    &__list-item {
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+        padding: 1.2rem 0;
+        border-bottom: 1px solid hsla(232, 13%, 49%, 0.25);
+    }
+
+    &__card-primary {
+        background: $White;
+    }
+
+    &__card-secondary {
+        background: linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%);
+        color: $White;
+    }
+
+    &__card-secondary p {
+        color: $White;
+    }
+
+    &__link {
+        display: inline-block;
+        width: 100%;
+        padding: 1.4rem 0;
+        letter-spacing: 1.39px;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        border-radius: 6px;
+    }
+
+    &__link-primary {
+        background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+        color: $White;
+    }
+
+    &__link-secondary {
+        background: white;
+        color: $Light-Blue;
+    }
 }
