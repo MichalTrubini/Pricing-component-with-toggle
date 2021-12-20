@@ -63,6 +63,47 @@ li {
     }
 }
 
+.toggle {
+    width: 56px;
+    height: 32px;
+    border-radius: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle__input {
+    display: none;
+}
+
+.toggle__fill {
+    position: relative;
+    width: 56px;
+    height: 32px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    transition: background 0.2s;
+}
+
+.toggle__fill::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 24px;
+    width: 24px;
+    background: #ffffff;
+    border-radius: 100%;
+    transition: transform 0.2s;
+}
+
+.toggle__input:checked ~ .toggle__fill {
+    background: #009578;
+}
+
+.toggle__input:checked ~ .toggle__fill::after {
+    transform: translateX(23px);
+}
+
 .cards {
     padding: 0 2.4rem;
     display: flex;
