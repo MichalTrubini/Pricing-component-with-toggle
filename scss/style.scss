@@ -269,10 +269,5 @@ form:valid ~ .cards .cards__card .cards__price-secondary {
             color: $White;
             outline: 1px solid $White;
         }
-
-        &__dollar {
-            font-size: 7.2rem;
-            line-height: 7.1rem;
-        }
     }
 }

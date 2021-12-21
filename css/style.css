@@ -457,9 +457,5 @@ form:valid ~ .cards .cards__card .cards__price-secondary {
     color: #fff;
     outline: 1px solid #fff;
   }
-  .cards__dollar {
-    font-size: 7.2rem;
-    line-height: 7.1rem;
-  }
 }
 /*# sourceMappingURL=style.css.map */
